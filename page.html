@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head eta charset="UTF-8">
+
+<title>查询</title>
+<script>
+    function compareNames() {
+      // 获取输入的姓名
+      var inputNames = document.getElementById("namesInput").value.split("\n");
+      
+      // 获取预先存储的姓名
+      var preStoredNames = document.getElementById("preStoredNames").value.split("\n");
+      
+      // 对比姓名并显示结果
+      var result = "";
+      for(var i = 0; i < preStoredNames.length; i++) {
+        if(!inputNames.includes(preStoredNames[i])) {
+          result += preStoredNames[i] + "<br>";
+        }
+      }
+      
+      // 显示结果
+      document.getElementById("result").innerHTML = result;
+    }
+  </script>
+<meta charset="utf-8">
+</head>
+<body bgcolor="#F0A693">
+<h1>查询</h1>
+  
+  <label for="namesInput">输入姓名组（每个姓名占一行）:</label>
+  <textarea id="namesInput" rows="4" cols="50"></textarea>
+  <br>
+  
+  <label for="preStoredNames">参照姓名组（每个姓名占一行）:</label>
+  <textarea id="preStoredNames" rows="4" cols="50">
+张锋
+王扬
+陈赟斐
+沐晓光
+韩小华
+金波
+陆丽峰
+方宏雷
+陈敏良
+周成
+金迪
+计顺泉
+沈晓伟
+王志鹏
+刘东辉
+童建斌
+孙冰峰
+沈广宇
+胡海涛
+吴春
+刘国清
+林涛
+张佳伟
+葛飞
+姚伟
+陆始立
+陈辛林
+张赟
+乔真
+房俊
+朱世英
+徐玮
+张亦君
+金来
+吴碧辉
+陈军
+徐政
+沈玥婷
+俞利萍
+陈静
+金忠翔
+吴加超
+赵刚
+吴青春
+章新兴
+陈杰
+杨辰
+陈昊
+许梦怡
+沈芳
+张春凤
+钱晓生
+李东伟
+童黎
+许雪荣
+沈乐
+詹斌兴
+沈伟
+陆红伟
+陈峰枫
+王翊
+陈伟
+尤徐杰
+祁晓东
+沈非
+杨志伟
+姚国红
+周冰杰
+严王君
+洪天云
+吴林飞
+丁建平
+王国西
+张辉
+胥旭尉
+
+
+  </textarea>
+  <br>
+  
+  <button onclick="compareNames()">查询</button>
+  
+  <h2>结果:</h2>
+  <div id="result"></div>
+</body>
+</html>
